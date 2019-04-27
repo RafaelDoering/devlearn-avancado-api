@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.send('UCL turma 2'))
+app.get('/', (req, res) => res.send('UCL'))
 
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);

@@ -1,5 +1,5 @@
 //controllers
-const Course = require('../models/course')
+const Course = require('../models/Course')
 
 module.exports.get = (req, res) => {
   Course.findById(req.params.id, (err, courseFound) => {
