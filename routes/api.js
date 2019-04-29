@@ -1,18 +1,12 @@
 //routes
 const express = require('express');
 
-const apiController = require('../controllers/api');
-
 const router = express.Router();
 
-router.get('/courses/:id', apiController.get);
+const courseRoutes = require('./course');
+router.use('/courses', courseRoutes);
 
-router.get('/courses', apiController.gets);
-
-router.post('/courses', apiController.create);
-
-router.put('/courses/:id', apiController.edit);
-
-router.delete('/courses/:id', apiController.delete);
+const userRoutes = require('./user');
+router.use('/user', userRoutes);
 
 module.exports = router;
